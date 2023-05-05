@@ -44,9 +44,11 @@ time.sleep(5)
 
 print('DAM EMITIDO')
 
+# BUSCA O ÚLTIMO ARQUIVO BAIXADO
 caminho_download = os.environ.get("PATH_DOWNLOAD")
 list_of_files = glob.glob(caminho_download) # * means all if need specific format then *.csv
 latest_file = max(list_of_files, key=os.path.getctime)
 print('BOLETO ENCONTRADO: ' + latest_file)
 
+# FAZ UPLOAD E ENVIA O ARQUIVO VIA SLACK
 upload_arquivo_slack("boleto-iptu", latest_file, "Boleto do último iptu pendente")

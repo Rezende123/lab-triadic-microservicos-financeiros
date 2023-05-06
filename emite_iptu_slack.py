@@ -7,7 +7,7 @@ import datetime
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from message_service_slack import upload_arquivo_slack
+from services.message_service_slack import upload_arquivo_slack
 
 driver = webdriver.Chrome()
 # ABRE SITE DO IPTU

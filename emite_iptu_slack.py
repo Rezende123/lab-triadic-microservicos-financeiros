@@ -13,10 +13,6 @@ driver = webdriver.Chrome()
 # ABRE SITE DO IPTU
 driver.get('https://servicosweb.sefaz.salvador.ba.gov.br/sistema/dam/IPTU_TL/servicos_DamIptuTL.asp?Tipo=D')
 
-# # FECHA POPUP
-# botao_fechar = driver.find_element(by=By.XPATH,value='/html/body/div[3]/div[2]/div/div/div[2]/button')
-# botao_fechar.click()
-
 # PREENCHE A INSCRICAO
 valor_inscricao_imovel = os.environ.get("INSCRICAO_IMOVEL")
 campo_inscricao = driver.find_element(by=By.XPATH,value='/html/body/div[2]/div[3]/form/div[1]/input')
